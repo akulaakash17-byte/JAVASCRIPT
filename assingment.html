@@ -65,3 +65,117 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Charity|Template</title> 
+   <style>
+        body{background-image: url(https://preview.colorlib.com/theme/charitee/assets/img/hero/h1_hero1.jpg.webp);
+             background-repeat: no-repeat;
+             background-size: cover;
+             padding-top:10px ;
+             margin: 0%;
+        }
+        .navbar{
+            display: flex;
+            background-color: transparent;
+            gap: 100px;
+            position: relative;
+            animation: slideIn 1s;
+
+        }
+        @keyframes slideIn{
+            from{
+                top: -200px;
+                opacity: 0;
+            }
+            to{
+                top: 0;
+                opacity: 1;
+            }
+        }
+        button{
+            background-color: transparent;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 12px;
+            padding: 8px 40px 0px 0px; 
+        }
+        .donate button:hover{
+              border: 1px solid white;
+              background-color:black;
+              color: white;
+              padding-bottom: 12px;
+        }
+        .donate  {
+            background-color:red;
+            margin-top: 10px;
+            margin-left: 110px;     
+        }
+        .donate button{
+            border: 1px solid transparent;
+            font-size: 20px;
+            padding-left: 20px;
+            
+        }
+        .slide-text{
+            margin-left: 120px;
+            color: white;
+            position: relative;
+            animation: slide 1.5s ;
+        }
+        @keyframes slide{
+            from{
+                bottom: -200px;
+                opacity: 0 ;  
+            }
+            to{
+                bottom: 0;
+                opacity: 1;
+            }
+        }
+    </style>
+    
+   
+</head>
+
+<body>
+    <div class="navbar">
+      <div>
+        <img src="https://preview.colorlib.com/theme/charitee/assets/img/logo/logo.png">
+      </div>
+
+         <div class="button">
+
+           <button><h3>Home</h3></button>
+           <button><h3>Who We Are?</h3></button>
+           <button><h3>Programs</h3></button>
+           <button><h3>About</h3></button>
+           <button><h3>Blog</h3></button>
+           <button><h3>Contact Us</h3></button>
+
+         </div>
+
+      <div class="donate">
+        <button>Make a Donation</button>
+      </div>
+      
+    </div><br><br><br><br><br><br><br><br>
+    <div class="slide-text">
+       
+       
+       <h1 style="font-size: 70px;">Give a helping<br>
+                                    hand to those<br>
+                                    who need it!
+       </h1>
+       <em style="font-size: 40px ;">
+        When a child gets access to good food,it<br>
+        can change just about everything.
+       </em>
+    </div>
+
+</body>
+</html>
