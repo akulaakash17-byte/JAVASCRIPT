@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JAVASCRIPT</title>
+
+<style>
+    body{
+        font-size: 20px;
+    }
+
+    .container{
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        margin-top: 40px;
+    }
+     .container2{
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        margin-top: 40px;
+    }
+
+    
+    .box{
+        width: 35%;         
+        height:350px;
+        background-color: rgba(0, 255, 255,0.7);           
+
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        transition: 0.3s;
+    }
+
+    .box:hover{
+        scale: 1.1;
+        transition: 0.5s;
+        box-shadow: 0 0 20px black;
+        background-color: aqua;
+    }
+    input{
+        padding: 6px;
+        width: 30%;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: 1px solid #aaa;
+        font-size: 18px;
+    }
+    button{
+        margin-top: 10px;
+        padding: 8px 15px;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    button:hover{
+        background-color: black;
+        border: 1px solid white;
+        scale: 1.1;
+        transition: 0.5s ease-in-out;
+    }
+    .box h1{
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+</style>
+
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="box">
+        <input  type="number" id="sum" placeholder=" put n ">
+        <button id="Getsum" onclick="sumOfN()">Get Sum</button>
+        <p id="result1"></p>
+    </div>
+
+    <div class="box">
+        <input type="number" id="x" placeholder="Get a table of x">
+        <button id="getTble" onclick="table()">Get Table</button>
+        <p id="result2"></p>
+    </div>
+</div>
+<div class="container2">
+    <div class="box">
+        <input type="number" id="stars" placeholder="n input gives n stars">
+        <button id="getstars" onclick="stars()">Get Stars</button>
+        <p id="result3"></p>
+    </div>
+
+    <div class="box">
+          <h1>RESULTS</h1>
+        
+          <label> subject 1</label>
+          <input id="sub1" placeholder="Enter marks" /><br>
+        
+          <label> subject 2</label>
+          <input id="sub2" placeholder="Enter marks" /><br>
+        
+          <label> subject 3</label>
+          <input id="sub3" placeholder="enter marks" /><br>
+
+          <button id="jj" onclick="grade()">submit</button>
+          <p id="result4"></p>
+    </div>
+
+</div>
+
+<script>
+        function sumOfN(){
+           let n=Number(document.getElementById("sum").value);
+            let result= n*(n+1)/2;
+            document.getElementById("result1").innerHTML=`<h1> sum =`+result
+        }
+        function table(){
+            let x=document.getElementById("x").value;
+            let result="";
+            for (let i=1;i<=10;i++){
+                result +=`${x}*${i}=${x*i} <br>`
+            }
+            document.getElementById("result2").innerHTML= ` The Following is ${x} Table:<br>`+result;
+        }
+        function stars() {
+            let y = Number(document.getElementById("stars").value);
+            let result = "";
+
+            for (let i = 1; i <= y; i++) {
+                for (let j = 1; j <= i; j++) {  
+                    result += "* ";             
+                }
+                result += "\n";                 
+            }
+
+            document.getElementById("result3").innerText = result;
+        }
+
+        function grade() {
+                let n = document.getElementById("sub1").value;
+                let y = document.getElementById("sub2").value;
+                let z = document.getElementById("sub3").value;
+                n = Number(n);
+                y = Number(y);
+                z = Number(z);
+                let result = n + y + z;
+                let average = (n + y + z) / 3;
+                let grade = "";
+                if (average >= 90) {
+                  grade = "A";
+                } else if (average >= 75) {
+                  grade = "B";
+                } else if (average >= 60) {
+                  grade = "C";
+                } else if (average < 60) {
+                  grade = "FAIL";
+                }
+
+                document.getElementById("result4").innerHTML =
+                  "total;" + result + "<br>Average: " + average + "<br>grade:" + grade;
+        }
+</script>
+
+</body>
+</html>
